@@ -22,9 +22,9 @@ This will generate the debug APK in the same location as mentioned above.
 
 ## Screenshots
 
-| Main Screen | Video Display | Landscape Mode |
-| :---: | :---: | :---: |
-| <img src="main activity.png" width="250"> | <img src="video display.png" width="250"> | <img src="landscape view.png" width="450"> |
+| Main Screen | Video Display |               Landscape Mode               |
+| :---: | :---: |:------------------------------------------:|
+| <img src="main activity.png" width="250"> | <img src="video display.png" width="250"> | <img src="landscape view.png" width="250"> |
 
 ## Ongoing Charity
 
