@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true"
+    tools:ignore="WebViewLayout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <!-- Video Title Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/video_title_bg"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:lineSpacingExtra="2dp" />
+
+        </LinearLayout>
+
+        <!-- Video Player Container -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#f8f9fa"
+            android:orientation="vertical">
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/shimmerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:layout_gravity="center"
+                app:shimmer_highlight_color="@color/card_shadow"
+                app:shimmer_base_alpha="@color/background_white"
+                app:shimmer_colored="true"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <WebView
+                    android:layout_width="match_parent"
+                    android:layout_height="320dp"
+                    android:background="#000000"
+                    android:layout_gravity="center" />
+            </com.facebook.shimmer.ShimmerFrameLayout>
+            <WebView
+                android:id="@+id/webViewEmbed"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:visibility="gone"
+                android:background="#000000"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <!-- Video Controls -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnLandscape"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="عرض أفقي 🖥 "
+                android:textSize="14sp"
+                android:padding="8dp"
+                android:background="@drawable/button_landscape"
+                android:textColor="#ffffff"
+                android:drawableStart="@drawable/ic_fullscreen"
+                android:drawablePadding="8dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Download Controls -->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnDownload"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="تحميل"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:background="@drawable/button_download"
+                    android:textColor="#ffffff"
+                    android:drawableStart="@drawable/ic_download"
+                    android:drawablePadding="8dp"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/downloadProgress"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:visibility="gone" />
+
+                <ImageButton
+                    android:id="@+id/btnOfflinePlay"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button_offline"
+                    android:src="@drawable/ic_offline_play"
+                    android:contentDescription="تشغيل بدون انترنت"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Footer Decoration -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:background="@drawable/footer_decoration" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

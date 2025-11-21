@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">دار الكيلاني</string>
+    <string name="update_url">https://raw.githubusercontent.com/username/repo/main/update.json</string>
+    <string name="about_us">هذا التطبيق يجمع أثمان سورة البقرة التي تم نشرها في صفحة الفيسبوك لـ  دار الكيلاني لتحفيظ القرآن الكريم بأحكام التجويد وأسباب النزول. الذي يهتم بتحفيظ القرآن الكريم بأحكام التجويد، وشرح المتون العلمية والشرعية، وأسباب النزول، وتدريس العلوم الشرعية. فاللهم اجعل هذا العمل في ميزان حسنات كل من ساهم فيه وانتفع به</string>
+</resources>
