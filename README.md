@@ -20,6 +20,12 @@ To build the application from source, you can use Android Studio or the followin
 
 This will generate the debug APK in the same location as mentioned above.
 
+## Screenshots
+
+| Main Screen | Video Display | Landscape Mode |
+| :---: | :---: | :---: |
+| <img src="main activity.png" width="250"> | <img src="video display.png" width="250"> | <img src="landscape view.png" width="450"> |
+
 ## Ongoing Charity
 
 This application is an ongoing charity. We ask you to pray for everyone who contributed to this work.

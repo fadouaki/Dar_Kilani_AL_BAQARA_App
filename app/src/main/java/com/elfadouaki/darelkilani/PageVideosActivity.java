@@ -21,7 +21,6 @@ public class PageVideosActivity extends AppCompatActivity {
     private ActivityPageVideosBinding binding;
     private ImageButton btnBackPage;
     private EditText searchEditText;
-    private ImageButton clearSearchButton;
     private VideoAdapter adapter;
 
     @Override
@@ -43,7 +42,6 @@ public class PageVideosActivity extends AppCompatActivity {
         setTitle("دار الكيلاني");
 
         setupBackButton();
-        setupSearchFunctionality();
     }
 
     private void setupBackButton() {
@@ -51,36 +49,6 @@ public class PageVideosActivity extends AppCompatActivity {
         btnBackPage.setOnClickListener(v -> finish());
     }
 
-    private void setupSearchFunctionality() {
-        searchEditText = findViewById(R.id.searchEditText);
-        clearSearchButton = findViewById(R.id.clearSearchButton);
-
-        searchEditText.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                String query = s.toString().trim();
-                adapter.filter(query);
-
-                // Show/hide clear button
-                if (query.isEmpty()) {
-                    clearSearchButton.setVisibility(View.GONE);
-                } else {
-                    clearSearchButton.setVisibility(View.VISIBLE);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {}
-        });
-
-        clearSearchButton.setOnClickListener(v -> {
-            searchEditText.setText("");
-            clearSearchButton.setVisibility(View.GONE);
-        });
-    }
 
     private String getArabicNumber(int number) {
         String[] arabicNumbers = {"", "الأول", "الثاني", "الثالث", "الرابع", "الخامس", "السادس", "السابع", "الثامن"};
